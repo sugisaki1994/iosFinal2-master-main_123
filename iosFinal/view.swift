@@ -1,10 +1,3 @@
-//
-//  view.swift
-//  iosFinal
-//
-//  Created by User02 on 2020/1/2.
-//  Copyright © 2020 tflee. All rights reserved.
-//
 
 import SwiftUI
 import Lottie

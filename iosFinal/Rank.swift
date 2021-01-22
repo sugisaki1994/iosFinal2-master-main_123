@@ -1,10 +1,4 @@
-//
-//  Rank.swift
-//  iosFinal
-//
-//  Created by User02 on 2019/12/26.
-//  Copyright © 2019 tflee. All rights reserved.
-//
+
 
 import SwiftUI
 
@@ -16,7 +10,7 @@ struct Rank: View {
                 VStack{
                     NavigationLink(destination: dcardlist())
                     {
-                        Image("Western")
+                        Image("dcard_icon")
                             .renderingMode(.original)
                             .resizable().frame(width: 300, height: 300)
                         .clipShape(Circle())
@@ -26,7 +20,7 @@ struct Rank: View {
                     }
                     NavigationLink(destination: youtubeview())
                     {
-                        Image("Eastern")
+                        Image("yt_icon")
                             .renderingMode(.original)
                             .resizable().frame(width: 300, height: 300)
                         .clipShape(Circle())

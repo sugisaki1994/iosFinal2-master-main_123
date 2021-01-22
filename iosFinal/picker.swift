@@ -1,10 +1,4 @@
-//
-//  picker.swift
-//  iosFinal
-//
-//  Created by User02 on 2020/1/2.
-//  Copyright © 2020 tflee. All rights reserved.
-//
+
 
 import SwiftUI
 import Lottie
@@ -13,7 +7,7 @@ struct picker: View {
     @State var isShowingImagePicker=false
     @State var imageChoose=UIImage()
     @State var name=""
-    @State var position="位置"
+    @State var position="主機"
     var body: some View {
         
         VStack {
@@ -44,23 +38,23 @@ struct picker: View {
                 TextField("姓名", text: $name)
                 Text("\(position)").contextMenu{
                     Button(action: {
-                        self.position="中鋒"
+                        self.position="PC"
                     }) {
-                    Text("中鋒")
+                    Text("PC")
                      Image(systemName: "star").imageScale(.small)
                     }
                     Button(action: {
-                   self.position="前鋒"
+                   self.position="XBOX"
                     }) {
-                    Text("前鋒")
+                    Text("XBOX")
                     Image(systemName: "star").imageScale(.small)
 
                     }
                     Button(action: {
-                    self.position="控衛"
+                    self.position="PlayStation"
 
                      }) {
-                     Text("控衛")
+                     Text("PlayStation")
                      Image(systemName: "star").imageScale(.small)
 
                      }

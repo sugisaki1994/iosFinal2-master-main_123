@@ -15,4 +15,8 @@ struct Item: Codable {
 struct snippet: Codable {
     var channelId: String
     var title: String
+    var resourceId: resourceId
+}
+struct resourceId: Codable{
+    var videoId: String
 }

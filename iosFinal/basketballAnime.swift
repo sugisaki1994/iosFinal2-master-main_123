@@ -1,10 +1,4 @@
-//
-//  basketballAnime.swift
-//  iosFinal
-//
-//  Created by User18 on 2019/12/25.
-//  Copyright © 2019 tflee. All rights reserved.
-//
+
 
 import SwiftUI
 import Lottie

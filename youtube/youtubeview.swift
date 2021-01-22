@@ -11,16 +11,22 @@ struct youtubeview: View {
         
         if let url = URL(string: urlStr) {
             URLSession.shared.dataTask(with: url) { (data, response , error) in
-                
                 let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .iso8601
                 
-                if let data = data,
-                   let video = try? decoder.decode(SearchResult.self, from: data){
-                    self.youtubes = video.items
+                
+                if let data = data{
+                    do{
+                        let video = try decoder.decode(SearchResult.self, from: data)
+                        youtubes = video.items
+                    }catch{
+                        print(error)
+                    }
                     
+                        
                 }
+                
             }.resume()
+        
         }
         
     }
@@ -31,10 +37,17 @@ struct youtubeview: View {
     
     
     var body: some View {
+        
         List(youtubes.indices, id:\.self, rowContent: { (index) in
+            NavigationLink(destination: safariView(name: "world"),label:{
                 ytRow(item: youtubes[index])
+            })
             
         })
+        .onAppear(perform: {
+            fetchdyoutube()
+        })
+        
     }
 }
 struct youtubeview_Previews: PreviewProvider {
